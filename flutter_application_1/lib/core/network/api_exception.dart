@@ -1,7 +1,5 @@
 import 'package:dio/dio.dart';
 
-/// Ошибка, которую приложение показывает пользователю.
-/// Сетевые сбои и ответы API приводятся к одному типу.
 class ApiException implements Exception {
   const ApiException(
     this.message, {

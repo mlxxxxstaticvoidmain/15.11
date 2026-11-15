@@ -1,6 +1,5 @@
 import 'exercise.dart';
 
-/// Упражнение в плане тренировки + отметка о выполнении.
 class WorkoutEntry {
   const WorkoutEntry({required this.exercise, this.isDone = false});
 

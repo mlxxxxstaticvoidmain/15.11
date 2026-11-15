@@ -5,7 +5,6 @@ import '../../core/network/api_exception.dart';
 import '../models/exercise.dart';
 import '../models/exercise_query.dart';
 
-/// Слой, который знает только про HTTP и API Ninjas.
 class ExerciseApi {
   ExerciseApi(this._dio);
 
@@ -35,7 +34,6 @@ class ExerciseApi {
     }
   }
 
-  /// Лёгкий запрос для проверки ключа.
   Future<void> ping() async {
     try {
       await _dio.get<List<dynamic>>(

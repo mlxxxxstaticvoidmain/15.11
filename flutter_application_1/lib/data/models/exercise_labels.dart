@@ -1,6 +1,5 @@
 import 'exercise.dart';
 
-/// Человекочитаемые подписи для значений API.
 abstract final class ExerciseLabels {
   static const Map<String, String> _muscles = {
     'abdominals': 'Пресс',
@@ -21,7 +20,6 @@ abstract final class ExerciseLabels {
     'triceps': 'Трицепс',
   };
 
-  /// Порядок групп для горизонтального списка фильтров.
   static const List<String> muscleKeys = [
     'chest',
     'lats',

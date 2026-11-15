@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:ui';
 
-/// Откладывает выполнение колбэка: поиск не уходит на сервер
-/// на каждую нажатую букву.
 class Debouncer {
   Debouncer(this._duration);
 

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Палитра «бумажного» тренировочного справочника:
-/// тёплая бумага, типографская тушь и сигнальный кирпичный цвет.
 abstract final class AppColors {
   static const Color paper = Color(0xFFF5F0E4);
   static const Color paperElevated = Color(0xFFFBF7EE);

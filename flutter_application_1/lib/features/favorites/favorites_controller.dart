@@ -17,7 +17,6 @@ class FavoritesController extends ChangeNotifier {
 
   bool isFavorite(String id) => _items.any((item) => item.id == id);
 
-  /// Возвращает true, если упражнение добавлено в избранное.
   bool toggle(Exercise exercise) {
     final wasFavorite = isFavorite(exercise.id);
     if (wasFavorite) {

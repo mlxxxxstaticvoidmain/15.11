@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Крупная сжатая гарнитура для заголовков и цифр.
-/// Основной текст остаётся системным — так интерфейс остаётся читаемым
-/// на любом размере экрана.
 abstract final class AppText {
   static const TextStyle _displayBase = TextStyle(
     fontFamily: 'PTSansNarrow',

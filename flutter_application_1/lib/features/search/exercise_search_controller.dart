@@ -9,7 +9,6 @@ import '../../data/models/exercise.dart';
 import '../../data/models/exercise_query.dart';
 import '../../data/repositories/exercise_repository.dart';
 
-/// Состояние экрана поиска: фильтры, загрузка, ошибки и результаты.
 class ExerciseSearchController extends ChangeNotifier {
   ExerciseSearchController(this._repository);
 

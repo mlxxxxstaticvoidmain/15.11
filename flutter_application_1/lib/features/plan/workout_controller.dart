@@ -6,7 +6,6 @@ import '../../data/models/exercise.dart';
 import '../../data/models/workout_entry.dart';
 import '../../data/repositories/workout_repository.dart';
 
-/// План тренировки: добавление, выполнение и очистка.
 class WorkoutController extends ChangeNotifier {
   WorkoutController(this._repository)
       : _entries = List<WorkoutEntry>.from(_repository.load());
@@ -27,7 +26,6 @@ class WorkoutController extends ChangeNotifier {
   bool contains(String id) =>
       _entries.any((entry) => entry.exercise.id == id);
 
-  /// Возвращает true, если упражнение добавлено в план.
   bool toggle(Exercise exercise) {
     final exists = contains(exercise.id);
     if (exists) {

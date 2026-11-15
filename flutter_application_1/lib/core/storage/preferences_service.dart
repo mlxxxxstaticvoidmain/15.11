@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Тонкая обёртка над SharedPreferences.
-///
-/// Ключ API хранится локально и читается синхронно, поэтому
-/// [AuthInterceptor] может достать его прямо в onRequest.
 class PreferencesService {
   PreferencesService._(this._prefs);
 

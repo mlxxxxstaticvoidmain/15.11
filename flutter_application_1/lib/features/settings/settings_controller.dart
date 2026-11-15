@@ -4,7 +4,6 @@ import '../../core/network/api_exception.dart';
 import '../../core/storage/preferences_service.dart';
 import '../../data/repositories/exercise_repository.dart';
 
-/// Управление ключом API Ninjas и проверка соединения.
 class SettingsController extends ChangeNotifier {
   SettingsController(this._preferences, this._repository);
 
@@ -32,7 +31,6 @@ class SettingsController extends ChangeNotifier {
 
   Future<void> markOnboardingSeen() => _preferences.markOnboardingSeen();
 
-  /// Сохраняет ключ и сразу проверяет его реальным запросом к API.
   Future<bool> saveAndCheck(String rawKey) async {
     final key = rawKey.trim();
     if (key.isEmpty) {
@@ -72,7 +70,6 @@ class SettingsController extends ChangeNotifier {
     }
   }
 
-  /// Проверяет уже сохранённый ключ, не меняя его.
   Future<bool> checkConnection() async {
     if (!hasApiKey) {
       _setMessage('Сначала сохраните ключ API Ninjas.', isError: true);

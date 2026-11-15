@@ -3,8 +3,6 @@ import 'dart:convert';
 import '../../core/storage/preferences_service.dart';
 import '../models/exercise.dart';
 
-/// Избранное хранится целиком (а не только id), чтобы карточки
-/// открывались без повторного запроса к сети.
 class FavoritesRepository {
   FavoritesRepository(this._preferences);
 
@@ -22,7 +20,6 @@ class FavoritesRepository {
           .map(Exercise.fromJson)
           .toList(growable: false);
     } catch (_) {
-      // Повреждённые локальные данные не должны ронять приложение.
       return const [];
     }
   }

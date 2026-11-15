@@ -5,10 +5,6 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 import '../config/app_config.dart';
 import 'auth_interceptor.dart';
 
-/// Собирает настроенный клиент Dio.
-///
-/// Порядок интерсепторов важен: сначала [AuthInterceptor] добавляет
-/// заголовок X-Api-Key, затем PrettyDioLogger печатает готовый запрос.
 Dio createDio(AuthInterceptor authInterceptor) {
   final dio = Dio(
     BaseOptions(
@@ -25,7 +21,7 @@ Dio createDio(AuthInterceptor authInterceptor) {
   if (kDebugMode) {
     dio.interceptors.add(
       PrettyDioLogger(
-        requestHeader: false, // не печатаем ключ API в консоль
+        requestHeader: false,
         requestBody: true,
         responseHeader: false,
         responseBody: true,

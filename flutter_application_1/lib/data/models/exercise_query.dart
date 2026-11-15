@@ -1,4 +1,3 @@
-/// Параметры запроса к /v1/exercises.
 class ExerciseQuery {
   const ExerciseQuery({
     this.name = '',

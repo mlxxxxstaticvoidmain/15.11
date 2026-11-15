@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../core/storage/preferences_service.dart';
 
-/// Светлая, тёмная или системная тема — выбор сохраняется локально.
 class ThemeController extends ChangeNotifier {
   ThemeController(this._preferences) : _mode = _preferences.themeMode;
 

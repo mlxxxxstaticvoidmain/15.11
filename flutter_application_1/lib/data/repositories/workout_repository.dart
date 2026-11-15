@@ -3,7 +3,6 @@ import 'dart:convert';
 import '../../core/storage/preferences_service.dart';
 import '../models/workout_entry.dart';
 
-/// План тренировки и отметки о выполнении.
 class WorkoutRepository {
   WorkoutRepository(this._preferences);
 

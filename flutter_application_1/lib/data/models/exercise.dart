@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-/// Упражнение из API Ninjas.
 class Exercise {
   const Exercise({
     required this.name,
@@ -22,7 +21,6 @@ class Exercise {
   final String? safetyInfo;
   final String? imageUrl;
 
-  /// Стабильный идентификатор для избранного и плана тренировки.
   String get id => '${muscle}_$name'.toLowerCase();
 
   factory Exercise.fromJson(Map<String, dynamic> json) {
@@ -57,7 +55,6 @@ class Exercise {
     return Exercise.fromJson(jsonDecode(source) as Map<String, dynamic>);
   }
 
-  /// Инструкция приходит одним абзацем — делим её на шаги по предложениям.
   List<String> get steps {
     final normalized = instructions.replaceAll(RegExp(r'\s+'), ' ').trim();
     if (normalized.isEmpty) return const [];

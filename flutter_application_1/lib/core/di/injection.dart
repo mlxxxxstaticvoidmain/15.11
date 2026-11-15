@@ -14,7 +14,6 @@ import '../network/auth_interceptor.dart';
 import '../network/dio_factory.dart';
 import '../storage/preferences_service.dart';
 
-/// Глобальный контейнер зависимостей.
 final GetIt getIt = GetIt.instance;
 
 Future<void> configureDependencies() async {
